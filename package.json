@@ -1,0 +1,14 @@
+{
+  "name": "nodesy",
+  "version": "1.0.0",
+  "description": "This is the homework for week 9 of the web dev course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}

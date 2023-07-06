@@ -69,7 +69,7 @@ function init() {
             },
         ])
         .then((data) => {
-            const filename = `${data.title.split(' ').join('')}.json`;
+            const filename = `${data.title.split(' ').join('')}.md`;
 
             writeToFile(filename, data);
         });

@@ -31,17 +31,20 @@ function writeToFile(fileName, data) {
     var liResponse = data.license;
 
     if (liResponse == 'Apache License v2.0') {
-        var license = '## License\n[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n';
+        var license = '## License\nThis project uses the Apache License v2.0.\n';
+        var badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n';
     } else if (liResponse == 'GNU General Public License v3.0') {
-        var license = '## License\n[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)\n';
+        var license = '## License\nThis project usese the GNU General Public License v3.0.\n';
+        var badge = '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)\n';
     } else if (liResponse == 'MIT License') {
-        var license = '## License\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n';
+        var license = '## License\nThis project uses the MIT License.\n';
+        var badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
     }
 
     var question = `## Questions\nIf you have any questions, feel free to email the creator by clicking on [this link](mailto:${data.email}).\n`+
     `To view more projects from this creator, view their GitHub profile here: [https://github.com/${data.username}](https://github.com/${data.username}).`
 
-    var page = title+desc+contents+install+usage+license+contr+test+question
+    var page = title+badge+desc+contents+install+usage+license+contr+test+question
 
     fs.writeFile(fileName, (page), (err) =>
         err ? console.log(err) : console.log('Success')
